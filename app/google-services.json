@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1071295394912",
+    "project_id": "designers-store",
+    "storage_bucket": "designers-store.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1071295394912:android:aaf2588b3e4eefc0f43f05",
+        "android_client_info": {
+          "package_name": "com.example.designersstore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1071295394912-gvb9gnf757ml7hg13hof80eac8c70s69.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZKsmu6mJO8l5e3Y-5nJBnri9nUATaFIw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1071295394912-gvb9gnf757ml7hg13hof80eac8c70s69.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
