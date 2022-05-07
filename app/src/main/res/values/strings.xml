@@ -98,5 +98,7 @@
     <string name="err_msg_please_enter_other_details">Please enter other details.</string>
     <string name="title_select_address">SELECT ADDRESS</string>
     <string name="title_edit_address">EDIT ADDRESS</string>
+    <string name="no_products_added_yet">No products added yet!</string>
+    <string name="action_add_product">Add Product</string>
     <!--END-->
 </resources>

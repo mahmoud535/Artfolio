@@ -10,9 +10,10 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.designersstore.R
 import com.example.designersstore.ui.activityclient.SettingsActivity
 import com.example.designersstore.ui.activitydesigners.Settings_Designers_Activity
+import com.example.designersstore.ui.fragmentsclient.BaseFragment
 
 
-class ProductsFragment : Fragment() {
+class ProductsFragment : BaseFragment() {
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     //If we want to see the option menu in fragment we need to add it.
@@ -20,23 +21,23 @@ class ProductsFragment : Fragment() {
   }
 //  private lateinit var dashboardViewModel: DashboardViewModel
 
+  private fun getProductListFromFireStore(){
+
+  }
+
   override fun onCreateView(
     inflater: LayoutInflater,
     container: ViewGroup?,
     savedInstanceState: Bundle?
   ): View? {
-//    dashboardViewModel =
-//            ViewModelProvider(this).get(DashboardViewModel::class.java)
     val root = inflater.inflate(R.layout.products_fragment, container, false)
-    val textView: TextView = root.findViewById(R.id.text_products)
-//    dashboardViewModel.text.observe(viewLifecycleOwner, Observer {
-//      textView.text = it
-//    })
+
     return root
   }
 
   override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
     inflater.inflate(R.menu.client_settings,menu)
+    inflater.inflate(R.menu.add_product_menu,menu)
     super.onCreateOptionsMenu(menu, inflater)
   }
 
@@ -47,6 +48,10 @@ class ProductsFragment : Fragment() {
       R.id.action_settings->{
         //TODO Step 9:Launch the SettingActivity on Click of action item.
         startActivity(Intent(activity, Settings_Designers_Activity::class.java))
+        return true
+      }
+      R.id.action_add_product->{
+        //startActivity(Intent(activity, AddproductActivity::class.java))
         return true
       }
     }
