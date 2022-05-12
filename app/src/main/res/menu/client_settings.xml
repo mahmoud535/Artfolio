@@ -7,6 +7,10 @@
         android:orderInCategory="100"
         android:title="@string/action_settings"
         app:showAsAction="never"/>
-
+    <item
+        android:id="@+id/action_cart"
+        android:icon="@drawable/ic_vector_cart"
+        android:title="@string/action_cart"
+        app:showAsAction="always" />
 
 </menu>

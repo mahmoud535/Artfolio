@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activitydesigners.ProductDetailsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_product_details_activity"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorOffWhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingStart="@dimen/toolbar_title_paddingStart"
+            android:paddingEnd="0dp"
+            android:text="DESIGN DETAILS"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/toolbar_title_text_size"
+            android:textStyle="bold"
+            android:paddingLeft="@dimen/toolbar_title_paddingLeft"
+            android:paddingRight="0dp" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_product_details_activity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/n"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+<!--            <ImageView-->
+<!--                android:id="@+id/iv_product_detail_image"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="50dp"-->
+<!--                android:background="@color/colorImageViewBackground"-->
+<!--                android:contentDescription="@string/content_description"-->
+<!--                android:scaleType="fitXY"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iv_product_detail_image"
+                android:layout_width="match_parent"
+                android:layout_height="550dp"
+                android:background="@color/colorImageViewBackground"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/content_description"
+                android:src="@drawable/logo_designer_store_light_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/border1" />
+
+            <LinearLayout
+                android:id="@+id/ll_product_details_title_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="#F3F3F3"
+                android:orientation="vertical"
+                android:padding="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_product_detail_image">
+
+                <com.example.designersstore.utils.MSPTextViewBold
+                    android:id="@+id/tv_product_details_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/item_value_text_color"
+                    android:textSize="20sp"
+                    tools:text="Design Title" />
+
+                <com.example.designersstore.utils.MSPTextView
+                    android:id="@+id/tv_product_details_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/item_value_text_color"
+                    android:textSize="16sp"
+                    tools:text="$100" />
+            </LinearLayout>
+
+            <com.example.designersstore.utils.MSPTextViewBold
+                android:id="@+id/tv_product_details_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="Product Description"
+                android:textColor="@color/item_value_text_color"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll_product_details_title_price" />
+
+            <com.example.designersstore.utils.MSPTextView
+                android:id="@+id/tv_product_details_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:textColor="@color/colorSecondaryText"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_product_details_label"
+                tools:text="This is Design details description." />
+
+            <LinearLayout
+                android:id="@+id/ll_product_details_quantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_product_details_description">
+
+                <com.example.designersstore.utils.MSPTextViewBold
+                    android:id="@+id/tv_product_details_quantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="@dimen/product_details_stock_quantity_paddingLeftEnd"
+                    android:text="@string/lbl_product_details_stock_quantity"
+                    android:textColor="@color/item_value_text_color"
+                    android:textSize="16sp" />
+
+                <com.example.designersstore.utils.MSPTextView
+                    android:id="@+id/tv_product_details_available_quantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/item_grey_border_background"
+                    android:paddingStart="16dp"
+                    android:paddingTop="5dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="5dp"
+                    android:textColor="@color/colorSecondaryText"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:text="5" />
+            </LinearLayout>
+
+            <!--TODO Step 1: Add the button as GoToCart -->
+            <!--START-->
+
+<!--            <com.example.designersstore.utils.MSPButton-->
+<!--                android:id="@+id/btn_add_to_cart"-->
+<!--                android:layout_width="200dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="40dp"-->
+<!--                android:background="@drawable/button_background"-->
+<!--                android:foreground="?attr/selectableItemBackground"-->
+<!--                android:paddingTop="@dimen/btn_padding"-->
+<!--                android:paddingBottom="@dimen/btn_padding"-->
+<!--                android:text="@string/btn_lbl_add_to_cart"-->
+<!--                android:textColor="@android:color/white"-->
+
+<!--                android:textSize="@dimen/btn_textSize"-->
+<!--                android:visibility="gone"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintHorizontal_bias="0.208"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/ll_product_details_quantity"-->
+<!--                tools:visibility="visible" />-->
+
+            <!--            <com.example.designersstore.utils.MSPButton-->
+<!--                android:id="@+id/btn_go_to_cart"-->
+<!--                android:layout_width="200dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginTop="32dp"-->
+<!--                android:background="@drawable/button_background"-->
+<!--                android:foreground="?attr/selectableItemBackground"-->
+<!--                android:gravity="center"-->
+<!--                android:paddingTop="@dimen/btn_padding"-->
+<!--                android:paddingBottom="@dimen/btn_padding"-->
+<!--                android:text="@string/btn_lbl_go_to_cart"-->
+<!--                android:textColor="@android:color/white"-->
+<!--                android:textSize="@dimen/btn_textSize"-->
+<!--                android:visibility="gone"-->
+
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintHorizontal_bias="0.208"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/btn_add_to_cart"-->
+<!--                tools:visibility="visible" />-->
+
+
+            <!--END-->
+
+
+            <com.example.designersstore.utils.MSPButton
+                android:id="@+id/btn_Chat"
+                android:layout_width="77dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="60dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/button_background_chat"
+                android:gravity="center"
+                android:paddingTop="@dimen/btn_padding"
+                android:paddingBottom="@dimen/btn_padding"
+                android:text="Chat"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/btn_textSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll_product_details_quantity" />
+
+            <com.example.designersstore.utils.MSPButton
+                android:id="@+id/btn_add_to_cart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="160dp"
+                android:background="@drawable/button_background1"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:paddingTop="@dimen/btn_padding"
+                android:paddingBottom="@dimen/btn_padding"
+                android:text="@string/btn_lbl_add_to_cart"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/btn_textSize"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll_product_details_quantity"
+                tools:visibility="visible"
+                android:layout_marginLeft="70dp"
+                android:layout_marginRight="180dp" />
+
+            <!--TODO Step 1: Add the button as GoToCart -->
+            <!--START-->
+            <com.example.designersstore.utils.MSPButton
+                android:id="@+id/btn_go_to_cart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="160dp"
+                android:background="@drawable/button_backround2"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:paddingTop="@dimen/btn_padding"
+                android:paddingBottom="@dimen/btn_padding"
+                android:text="@string/btn_lbl_go_to_cart"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/btn_textSize"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_add_to_cart"
+                tools:visibility="visible"
+                android:layout_marginLeft="70dp"
+                android:layout_marginRight="180dp" />
+            <!--END-->
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,11 +11,35 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DesignersStore">
-
-        <activity android:name=".ui.activitydesigners.AddEditAddressActivityDesigners"
+        <activity android:name=".ui.activitydesigners.SoldProductDetailsActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.DesignersStore.NoActionBar" />
-        <activity android:name=".ui.activitydesigners.AddressListActivity_Designer"
+        <activity
+            android:name=".ui.activityclient.MyOrderDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.DesignersStore.NoActionBar" />
+        <activity
+            android:name=".ui.activityclient.CheckoutActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.DesignersStore.NoActionBar" />
+        <activity
+            android:name=".ui.activityclient.CartListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.DesignersStore.NoActionBar" />
+        <activity
+            android:name=".ui.activitydesigners.AddproductActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.DesignersStore.NoActionBar" />
+        <activity
+            android:name=".ui.activitydesigners.ProductDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.DesignersStore.NoActionBar" />
+        <activity
+            android:name=".ui.activitydesigners.AddEditAddressActivityDesigners"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.DesignersStore.NoActionBar" />
+        <activity
+            android:name=".ui.activitydesigners.AddressListActivity_Designer"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.DesignersStore.NoActionBar" />
         <activity

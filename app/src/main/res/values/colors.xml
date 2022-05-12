@@ -10,6 +10,10 @@
     <color name="Red">#FF1744</color>
     <color name="MV">#D500F9</color>
 
+    <color name="colorAccent">#ED2173</color>
+    <color name="colorOrderStatusInProcess">#FF9800</color>
+    <color name="colorOrderStatusDelivered">#8BC34A</color>
+
     <color name="colorSnackBarSuccess">#8BC34A</color>
     <color name="colorSnackBarError">#F72400</color>
 

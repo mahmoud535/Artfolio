@@ -5,9 +5,9 @@
     android:shape="rectangle">
 
     <stroke
-        android:width="@dimen/user_image_background_stroke"
-        android:color="@color/colorSecondaryText" />
+        android:width="5dp"
+        android:color="@color/white" />
 
-    <corners android:radius="@dimen/user_image_background_corner_radius" />
+    <corners android:radius="80sp" />
 </shape>
     <!--END-->

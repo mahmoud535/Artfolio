@@ -23,4 +23,12 @@
 
     <style name="Theme.DesignersStore.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="border">
+        <item name="cornerSize">5%</item>
+    </style>
+
+    <style name="border1">
+        <item name="cornerSizeTopLeft">5%</item>
+        <item name="cornerSizeTopRight">5%</item>
+    </style>
 </resources>

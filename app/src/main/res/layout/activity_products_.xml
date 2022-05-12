@@ -4,7 +4,7 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
 android:id="@+id/container"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
-android:paddingTop="?attr/actionBarSize">
+>
 
 <com.google.android.material.bottomnavigation.BottomNavigationView
     android:id="@+id/nav_view_Designers"
@@ -22,7 +22,7 @@ android:paddingTop="?attr/actionBarSize">
     android:id="@+id/nav_host_fragment_Designers"
     android:name="androidx.navigation.fragment.NavHostFragment"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="0dp"
     app:defaultNavHost="true"
     app:layout_constraintBottom_toTopOf="@id/nav_view_Designers"
     app:layout_constraintLeft_toLeftOf="parent"

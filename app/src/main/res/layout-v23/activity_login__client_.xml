@@ -31,7 +31,7 @@
         android:textColor="#FFFFFF"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/til_email_Client"
+        app:layout_constraintBottom_toTopOf="@+id/et_email_Client"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.114"
         app:layout_constraintStart_toStartOf="parent" />
@@ -49,56 +49,94 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_email_Client"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="16dp"
-        android:hint="@string/et_hint_email_id"
-        android:textColorHint="@color/colorSecondaryText"
+
+    <EditText
+        android:id="@+id/et_email_Client"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/rounded_edittext_register_login"
+        android:ems="10"
+        android:hint="Email"
+        android:textSize="14dp"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="16dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_title_Client">
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_Client"/>
 
-        <com.example.designersstore.utils.MSPEditText
-            android:id="@+id/et_email_Client"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="text"
-            android:padding="@dimen/et_padding"
-            android:textColor="@color/colorPrimaryText"
-            android:textSize="@dimen/et_textSize"
-            tools:text="abc@gmail.com" />
-    </com.google.android.material.textfield.TextInputLayout>
+    <EditText
+        android:id="@+id/et_password_Client"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/rounded_edittext_register_login"
+        android:ems="10"
+        android:hint="Password"
+        android:textSize="14dp"
+        android:inputType="textPassword"
+        android:paddingLeft="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/et_email_Client"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/et_email_Client"
+        app:layout_constraintTop_toBottomOf="@+id/et_email_Client"/>
 
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_password_Client"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="16dp"
-        android:hint="@string/et_hint_password"
-        android:textColorHint="@color/colorSecondaryText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/til_email_Client">
 
-        <com.example.designersstore.utils.MSPEditText
-            android:id="@+id/et_password_Client"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:padding="@dimen/et_padding"
-            android:textColor="@color/colorPrimaryText"
-            android:textSize="@dimen/et_textSize"
-            tools:text="123456" />
-    </com.google.android.material.textfield.TextInputLayout>
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:id="@+id/til_email_Client"-->
+<!--        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="16dp"-->
+<!--        android:layout_marginTop="50dp"-->
+<!--        android:layout_marginEnd="16dp"-->
+<!--        android:hint="@string/et_hint_email_id"-->
+<!--        android:textColorHint="@color/colorSecondaryText"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/tv_title_Client">-->
+
+<!--        <com.example.designersstore.utils.MSPEditText-->
+<!--            android:id="@+id/et_email_Client"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:inputType="text"-->
+<!--            android:padding="@dimen/et_padding"-->
+<!--            android:textColor="@color/colorPrimaryText"-->
+<!--            android:textSize="@dimen/et_textSize"-->
+<!--            tools:text="abc@gmail.com" />-->
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:id="@+id/til_password_Client"-->
+<!--        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="16dp"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:layout_marginEnd="16dp"-->
+<!--        android:hint="@string/et_hint_password"-->
+<!--        android:textColorHint="@color/colorSecondaryText"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/til_email_Client">-->
+
+<!--        <com.example.designersstore.utils.MSPEditText-->
+<!--            android:id="@+id/et_password_Client"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:inputType="textPassword"-->
+<!--            android:padding="@dimen/et_padding"-->
+<!--            android:textColor="@color/colorPrimaryText"-->
+<!--            android:textSize="@dimen/et_textSize"-->
+<!--            tools:text="123456" />-->
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+
     <com.example.designersstore.utils.MSPTextView
         android:id="@+id/tv_forgot_password_Client"
         android:layout_width="wrap_content"
@@ -110,7 +148,7 @@
         android:textColor="@color/colorSecondaryText"
         android:textSize="@dimen/forgot_password_textSize"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/til_password_Client"
+        app:layout_constraintTop_toBottomOf="@id/et_password_Client"
         android:layout_marginRight="16dp" />
 
 
@@ -119,9 +157,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
         android:background="@drawable/button_background"
         android:foreground="?attr/selectableItemBackground"
         android:gravity="center"

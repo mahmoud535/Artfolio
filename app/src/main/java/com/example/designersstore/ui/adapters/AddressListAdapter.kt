@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.designersstore.R
 import com.example.designersstore.models.AddressClient
 import com.example.designersstore.ui.activityclient.AddEditAddressActivity
+import com.example.designersstore.ui.activityclient.CheckoutActivity
 import com.example.designersstore.utils.Constants
 import kotlinx.android.synthetic.main.item_address_layout.view.*
 
@@ -46,13 +47,13 @@ open class AddressListAdapter (
             holder.itemView.tv_address_details.text = "${model.address}, ${model.zipCode}"
             holder.itemView.tv_address_mobile_number.text = model.mobileNumber
 
-//            if (selectAddress) {
-//                holder.itemView.setOnClickListener {
-//                    val intent=Intent(context,CheckoutActivity::class.java)
-//                    intent.putExtra(Constants.EXTRA_SELECT_ADDRESS_CLIENT,model)
-//                    context.startActivity(intent)
-//                }
-//            }
+            if (selectAddress) {
+                holder.itemView.setOnClickListener {
+                    val intent=Intent(context, CheckoutActivity::class.java)
+                    intent.putExtra(Constants.EXTRA_SELECT_ADDRESS_CLIENT,model)
+                    context.startActivity(intent)
+                }
+            }
         }
     }
     /**
