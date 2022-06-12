@@ -3,6 +3,7 @@ package com.example.designersstore.ui.activitydesigners
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.core.content.ContextCompat
@@ -10,10 +11,13 @@ import com.example.designersstore.R
 import com.example.designersstore.firestore.FireStoreClass
 import com.example.designersstore.models.CartItem
 import com.example.designersstore.models.Product
+import com.example.designersstore.models.newmodel.NewUser
 import com.example.designersstore.ui.activity.BaseActivity
 import com.example.designersstore.ui.activityclient.CartListActivity
 import com.example.designersstore.utils.Constants
 import com.example.designersstore.utils.GlideLoader
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_product_details.*
 
 class ProductDetailsActivity : BaseActivity(),View.OnClickListener {
@@ -43,6 +47,7 @@ class ProductDetailsActivity : BaseActivity(),View.OnClickListener {
         getProductDetails()
         btn_add_to_cart.setOnClickListener(this)
         btn_go_to_cart.setOnClickListener(this)
+        btn_Chat.setOnClickListener(this)
     }
     private fun getProductDetails(){
         showProgressDialog(resources.getString(R.string.please_wait))
@@ -146,7 +151,36 @@ class ProductDetailsActivity : BaseActivity(),View.OnClickListener {
                 R.id.btn_go_to_cart->{
                     startActivity(Intent(this@ProductDetailsActivity, CartListActivity::class.java))
                 }
+
+                R.id.btn_Chat->{
+                    val user =
+                        NewUser(
+                            mProductDetails.user_id ,
+                            mProductDetails.user_name
+                            ,
+                            mProductDetails.image
+                        )
+                    showProgressDialog("Please wait....")
+                    saveUserToFirebaseDatabase(user)
+                }
             }
         }
+    }
+
+    private fun saveUserToFirebaseDatabase(user: NewUser) {
+        val uid = FirebaseAuth.getInstance().uid ?: return
+        val ref = FirebaseDatabase.getInstance().getReference("/users/$uid")
+
+        ref.setValue(user)
+            .addOnSuccessListener {
+                hideProgressDialog()
+                val intent = Intent(this@ProductDetailsActivity, ActivityChatLogDesginer::class.java)
+                intent.putExtra(ActivityDesignerNewMessages.USER_KEY, user)
+                startActivity(intent)
+                finish()
+            }
+            .addOnFailureListener {
+                Log.d("TAG", "Failed to set value to database: ${it.message}")
+            }
     }
 }

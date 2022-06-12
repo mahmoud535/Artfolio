@@ -3,6 +3,7 @@
     package="com.example.designersstore">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -11,6 +12,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DesignersStore">
+
+        <activity
+            android:name=".ui.activitydesigners.ActivityChatLogDesginer"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activitydesigners.ActivityDesignerNewMessages"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activityclient.ActivityChatLogClient"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activityclient.ActivityClientNewMessages"
+            android:exported="false" />
         <activity android:name=".ui.activitydesigners.SoldProductDetailsActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.DesignersStore.NoActionBar" />

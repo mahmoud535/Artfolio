@@ -25,7 +25,7 @@ class MSPText (context: Context, attrs: AttributeSet)  : AppCompatTextView(conte
     private fun applyFont(){
         // this is used to get file from the assets folder and set it to the title textView.
         val typeface:Typeface=
-            Typeface.createFromAsset(context.assets,"Conquest-8MxyM.ttf")
+            Typeface.createFromAsset(context.assets,"Amsterdam-ZVGqm.ttf")
         setTypeface(typeface)
     }
 
