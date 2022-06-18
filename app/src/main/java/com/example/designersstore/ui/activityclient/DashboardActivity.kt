@@ -12,11 +12,12 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.designersstore.R
+import com.example.designersstore.ui.activity.BaseActivity
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.snackbar.Snackbar
 
-class DashboardActivity : AppCompatActivity() {
+class DashboardActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,5 +37,7 @@ class DashboardActivity : AppCompatActivity() {
 
 
 
-
+    override fun onBackPressed() {
+        doubleBackToExit()
+    }
 }

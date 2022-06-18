@@ -30,10 +30,7 @@ class ActivityClientNewMessages : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_new_messages)
 
-
         fetchUsers()
-
-
     }
 
     private fun fetchUsers() {

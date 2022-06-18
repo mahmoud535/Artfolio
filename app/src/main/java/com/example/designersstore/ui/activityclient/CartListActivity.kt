@@ -73,15 +73,15 @@ class CartListActivity : BaseActivity() {
                 }
             }
 
-            tv_sub_total.text = "$$subTotal"
+            tv_sub_total.text = "ج.م$subTotal"
             // Here we have kept Shipping Charge is fixed as $10 but in your case it may cary. Also, it depends on the location and total amount.
-            tv_shipping_charge.text = "$10.0"
+            tv_shipping_charge.text = "ج.م10.0"
 
             if (subTotal > 0) {
                 ll_checkout.visibility = View.VISIBLE
 
                 val total = subTotal + 10
-                tv_total_amount.text = "$$total"
+                tv_total_amount.text = "ج.م$total"
             } else {
                 ll_checkout.visibility = View.GONE
             }

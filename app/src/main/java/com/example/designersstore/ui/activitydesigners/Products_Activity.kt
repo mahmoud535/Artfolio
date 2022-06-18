@@ -7,9 +7,10 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.designersstore.R
+import com.example.designersstore.ui.activity.BaseActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class Products_Activity : AppCompatActivity() {
+class Products_Activity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,5 +27,9 @@ class Products_Activity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+    }
+
+    override fun onBackPressed() {
+        doubleBackToExit()
     }
 }

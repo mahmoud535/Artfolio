@@ -43,6 +43,7 @@ class ChatFragment : Fragment() {
         adapter.setOnItemClickListener { item, _ ->
             val intent = Intent(requireContext(), ActivityChatLogClient::class.java)
             val row = item as LatestMessageRow
+            Log.e("ChatFragment", "chat user ${row.chatPartnerUser?.uid} name ${row.chatPartnerUser?.name}")
             intent.putExtra(ActivityClientNewMessages.USER_KEY, row.chatPartnerUser)
             startActivity(intent)
         }
@@ -73,11 +74,16 @@ class ChatFragment : Fragment() {
 
 
     private fun refreshRecyclerViewMessages() {
-        adapter.clear()
-        latestMessagesMap.values.forEach {
-            adapter.add(LatestMessageRow(it, requireContext()))
+        /**Detect this fragment is shown to user because if new updates
+         * come from realtime database while this screen is de attached
+         * this screen will crash if it's not attached to main thread */
+        if (isVisible) {
+            adapter.clear()
+            latestMessagesMap.values.forEach {
+                adapter.add(LatestMessageRow(it, requireContext()))
+            }
+            swiperefresh.isRefreshing = false
         }
-        swiperefresh.isRefreshing = false
     }
 
     private fun listenForLatestMessages() {

@@ -2,6 +2,8 @@ package com.example.designersstore.ui.activitydesigners
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.view.View
 import android.widget.Toast
 import com.example.designersstore.models.newmodel.ChatMessage
 import com.example.designersstore.models.newmodel.NewUser
@@ -9,6 +11,7 @@ import com.example.designersstore.utils.DateUtils
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.designersstore.R
+import com.example.designersstore.ui.activityclient.ActivityChatLogClient
 import com.example.designersstore.ui.fragmentsclient.ChatFragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
@@ -20,6 +23,7 @@ import kotlinx.android.synthetic.main.activity_chat_log_client.swiperefresh
 import kotlinx.android.synthetic.main.activity_chat_log_desginer.*
 import kotlinx.android.synthetic.main.chat_from_row.view.*
 import kotlinx.android.synthetic.main.chat_to_row.view.*
+import kotlinx.android.synthetic.main.fragment_chat.*
 
 class ActivityChatLogDesginer : AppCompatActivity() {
     companion object {
@@ -31,9 +35,28 @@ class ActivityChatLogDesginer : AppCompatActivity() {
     private val toUser: NewUser?
         get() = intent.getParcelableExtra(ActivityDesignerNewMessages.USER_KEY)
 
+
+
+    /**you need to get current user **/
+    private fun fetchCurrentUser() {
+        val uid = FirebaseAuth.getInstance().uid ?: return
+        val ref = FirebaseDatabase.getInstance().getReference("/users/$uid")
+        ref.addListenerForSingleValueEvent(object : ValueEventListener {
+            override fun onCancelled(databaseError: DatabaseError) {
+            }
+
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                ChatFragment.currentUser = dataSnapshot.getValue(NewUser::class.java)
+            }
+
+        })
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_chat_log_desginer)
+
+    //    fetchCurrentUser()
 
         recyclerview_chat_log_designer.adapter = adapter
 
@@ -41,9 +64,18 @@ class ActivityChatLogDesginer : AppCompatActivity() {
 
         listenForMessages()
 
+        /*this happen when partner user was deleted**/
+        if(toUser==null) buttons_container.visibility = View.INVISIBLE
+
         send_button_chat_log_des.setOnClickListener {
             performSendMessage()
         }
+
+
+
+//        swiperefresh.setOnRefreshListener {
+//            fetchCurrentUser()
+//        }
     }
 
     private fun listenForMessages() {
@@ -53,6 +85,8 @@ class ActivityChatLogDesginer : AppCompatActivity() {
         val fromId = FirebaseAuth.getInstance().uid ?: return
         val toId = toUser?.uid
         val ref = FirebaseDatabase.getInstance().getReference("/user-messages/$fromId/$toId")
+
+        Log.e("ActivityDesignchat" , "from $fromId to $toId")
 
         ref.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onCancelled(databaseError: DatabaseError) {
@@ -80,9 +114,13 @@ class ActivityChatLogDesginer : AppCompatActivity() {
 
             override fun onChildAdded(dataSnapshot: DataSnapshot, previousChildName: String?) {
                 dataSnapshot.getValue(ChatMessage::class.java)?.let {
+                    Log.e("ActivityDesignchat","on add ${it.fromId == FirebaseAuth.getInstance().uid} => ${dataSnapshot.value}")
+
                     if (it.fromId == FirebaseAuth.getInstance().uid) {
                         val currentUser = ChatFragment.currentUser ?: return
-                        adapter.add(ChatFromItem(it.text, currentUser, it.timestamp))
+                        //   Log.e("ActivityDesignchat","on current ${currentUser}")
+                        //
+                        adapter.add(ChatFromItem(it.text, toUser!!, it.timestamp))
                     } else {
                         adapter.add(ChatToItem(it.text, toUser!!, it.timestamp))
                     }
@@ -112,22 +150,32 @@ class ActivityChatLogDesginer : AppCompatActivity() {
         val reference = FirebaseDatabase.getInstance().getReference("/user-messages/$fromId/$toId").push()
         val toReference = FirebaseDatabase.getInstance().getReference("/user-messages/$toId/$fromId").push()
 
-        val chatMessage = ChatMessage(reference.key!!, text, fromId, toId!!, System.currentTimeMillis() / 1000)
-        reference.setValue(chatMessage)
-            .addOnSuccessListener {
-               // Log.d(ActivityChatLogClient.TAG, "Saved our chat message: ${reference.key}")
-                edittext_chat_log_des.text.clear()
-                recyclerview_chat_log_designer.smoothScrollToPosition(adapter.itemCount - 1)
-            }
+        try{
 
-        toReference.setValue(chatMessage)
+            Log.e("ActivityDesignchat" , "to user ${toUser?.uid} , key ${fromId}")
+
+            val chatMessage = ChatMessage(reference.key!!, text, fromId, toId!!, System.currentTimeMillis() / 1000)
+            reference.setValue(chatMessage)
+                .addOnSuccessListener {
+                    Log.d(ActivityChatLogClient.TAG, "Saved our chat message: ${reference.key}")
+                    edittext_chat_log_des.text.clear()
+
+                    if(adapter.itemCount >1) {
+                        recyclerview_chat_log_designer.smoothScrollToPosition(adapter.itemCount - 1)
+                    }
+                }
+
+            toReference.setValue(chatMessage)
 
 
-        val latestMessageRef = FirebaseDatabase.getInstance().getReference("/latest-messages/$fromId/$toId")
-        latestMessageRef.setValue(chatMessage)
+            val latestMessageRef = FirebaseDatabase.getInstance().getReference("/latest-messages/$fromId/$toId")
+            latestMessageRef.setValue(chatMessage)
 
-        val latestMessageToRef = FirebaseDatabase.getInstance().getReference("/latest-messages/$toId/$fromId")
-        latestMessageToRef.setValue(chatMessage)
+            val latestMessageToRef = FirebaseDatabase.getInstance().getReference("/latest-messages/$toId/$fromId")
+            latestMessageToRef.setValue(chatMessage)
+        }catch (e:Exception){
+            e.printStackTrace()
+        }
     }
 }
 
@@ -185,5 +233,4 @@ class ChatToItem(val text: String, val user: NewUser, val timestamp: Long) : Ite
     override fun getLayout(): Int {
         return R.layout.chat_to_row
     }
-
 }

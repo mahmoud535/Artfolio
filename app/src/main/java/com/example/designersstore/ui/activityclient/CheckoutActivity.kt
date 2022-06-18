@@ -131,13 +131,13 @@ class CheckoutActivity : BaseActivity() {
                 mSubTotal +=(price * quantity)
             }
         }
-        tv_checkout_sub_total.text="$$mSubTotal"
-        tv_checkout_shipping_charge.text="$10.0"
+        tv_checkout_sub_total.text="ج.م$mSubTotal"
+        tv_checkout_shipping_charge.text="ج.م10.0"
 
         if (mSubTotal>0){
             ll_checkout_place_order.visibility= View.VISIBLE
             mTotalAmount=mSubTotal+10.0
-            tv_checkout_total_amount.text="$$mTotalAmount"
+            tv_checkout_total_amount.text="ج.م$mTotalAmount"
         }else{
             ll_checkout_place_order.visibility= View.GONE
         }

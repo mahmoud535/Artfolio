@@ -42,7 +42,7 @@
         android:layout_height="50dp"
         android:layout_marginEnd="8dp"
         android:layout_marginTop="8dp"
-        android:src="@drawable/ic_launcher_background"
+        android:src="@drawable/user_photo"
         app:civ_border_color="@android:color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>

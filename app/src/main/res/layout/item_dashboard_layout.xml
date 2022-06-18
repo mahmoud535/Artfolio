@@ -28,7 +28,7 @@
                 android:contentDescription="@string/content_description"
                 android:adjustViewBounds="true"
                 app:shapeAppearanceOverlay="@style/border"
-                android:src="@drawable/ic_launcher_background"/>
+                android:src="@drawable/logo_designer_store_light_gray"/>
 
 <!--    <View-->
 <!--        android:id="@+id/view_divider"-->

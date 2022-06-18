@@ -3,6 +3,7 @@ package com.example.designersstore.ui.activityclient
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.Toast
 import com.example.designersstore.models.newmodel.ChatMessage
 import com.example.designersstore.models.newmodel.NewUser
@@ -39,6 +40,9 @@ class ActivityChatLogClient : AppCompatActivity() {
 
         listenForMessages()
 
+        send_button_chat_log.isEnabled =  (toUser !=null)
+        if(toUser==null) buttons_container.visibility = View.INVISIBLE
+
         send_button_chat_log.setOnClickListener {
             performSendMessage()
         }
@@ -51,6 +55,7 @@ class ActivityChatLogClient : AppCompatActivity() {
         val fromId = FirebaseAuth.getInstance().uid ?: return
         val toId = toUser?.uid
         val ref = FirebaseDatabase.getInstance().getReference("/user-messages/$fromId/$toId")
+        Log.e("Activitychatclient" , "from $fromId to $toId")
 
         ref.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onCancelled(databaseError: DatabaseError) {
@@ -110,22 +115,26 @@ class ActivityChatLogClient : AppCompatActivity() {
         val reference = FirebaseDatabase.getInstance().getReference("/user-messages/$fromId/$toId").push()
         val toReference = FirebaseDatabase.getInstance().getReference("/user-messages/$toId/$fromId").push()
 
-        val chatMessage = ChatMessage(reference.key!!, text, fromId, toId!!, System.currentTimeMillis() / 1000)
-        reference.setValue(chatMessage)
-            .addOnSuccessListener {
-                Log.d(TAG, "Saved our chat message: ${reference.key}")
-                edittext_chat_log.text.clear()
-                recyclerview_chat_log.smoothScrollToPosition(adapter.itemCount - 1)
-            }
+        try {
+            Log.e("ActivityClientChat" , "to user ${toUser?.uid} , key ${reference.key}")
+            val chatMessage = ChatMessage(reference.key!!, text, fromId, toId!!, System.currentTimeMillis() / 1000)
+            reference.setValue(chatMessage)
+                .addOnSuccessListener {
+                    Log.d(TAG, "Saved our chat message: ${reference.key}")
+                    edittext_chat_log.text.clear()
+                    recyclerview_chat_log.smoothScrollToPosition(adapter.itemCount - 1)
+                }
 
-        toReference.setValue(chatMessage)
+            toReference.setValue(chatMessage)
 
+            val latestMessageRef = FirebaseDatabase.getInstance().getReference("/latest-messages/$fromId/$toId")
+            latestMessageRef.setValue(chatMessage)
 
-        val latestMessageRef = FirebaseDatabase.getInstance().getReference("/latest-messages/$fromId/$toId")
-        latestMessageRef.setValue(chatMessage)
-
-        val latestMessageToRef = FirebaseDatabase.getInstance().getReference("/latest-messages/$toId/$fromId")
-        latestMessageToRef.setValue(chatMessage)
+            val latestMessageToRef = FirebaseDatabase.getInstance().getReference("/latest-messages/$toId/$fromId")
+            latestMessageToRef.setValue(chatMessage)
+        }catch (e:Exception){
+            e.printStackTrace()
+        }
     }
 }
 

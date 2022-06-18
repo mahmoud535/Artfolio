@@ -24,6 +24,8 @@ import kotlinx.android.synthetic.main.user_row_new_message.view.*
 class ActivityDesignerNewMessages : AppCompatActivity() {
 
     companion object {
+
+
         const val USER_KEY = "USER_KEY"
         private val TAG = ActivityDesignerNewMessages::class.java.simpleName
     }
@@ -59,7 +61,7 @@ class ActivityDesignerNewMessages : AppCompatActivity() {
                 adapter.setOnItemClickListener { item, view ->
                     val userItem = item as UserItem
                     val intent = Intent(view.context, ActivityChatLogDesginer::class.java)
-                    intent.putExtra(ActivityDesignerNewMessages.USER_KEY, userItem.user)
+                    intent.putExtra(USER_KEY, userItem.user)
                     startActivity(intent)
                     finish()
                 }

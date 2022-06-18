@@ -4,9 +4,7 @@ import android.text.format.DateUtils
 import java.text.SimpleDateFormat
 import java.util.*
 
-/**
- * Created by ansh on 13/10/18.
- */
+
 object DateUtils {
 
     val fullFormattedTime = SimpleDateFormat("d MMM, h:mm a", Locale.US) // the format of your date
