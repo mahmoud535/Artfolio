@@ -5,10 +5,7 @@
 
             <solid android:color="#FF1744" />
 
-            <corners android:bottomLeftRadius="@dimen/gender_radio_button_radius"
-                android:bottomRightRadius="@dimen/gender_radio_button_radius"
-                android:topLeftRadius="@dimen/gender_radio_button_radius"
-                android:topRightRadius="@dimen/gender_radio_button_radius" />
+            <corners android:radius="@dimen/_25sdp"/>
         </shape>
     </item>
 
@@ -20,10 +17,7 @@
                 android:color="@color/colorSecondaryText" />
 
             <corners
-                android:bottomLeftRadius="@dimen/gender_radio_button_radius"
-                android:bottomRightRadius="@dimen/gender_radio_button_radius"
-                android:topLeftRadius="@dimen/gender_radio_button_radius"
-                android:topRightRadius="@dimen/gender_radio_button_radius" />
+                android:radius="@dimen/_25sdp"/>
         </shape>
     </item>
 </selector>

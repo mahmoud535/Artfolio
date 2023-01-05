@@ -28,10 +28,11 @@
 
         <gradient
             android:angle="360"
-            android:endColor="#D500F9"
+            android:endColor="#CC00EF"
             android:startColor="@color/Red"
             android:type="linear"/>
         <corners android:radius="25dp"/>
+    <!--            android:endColor="#CC00EF"-->
 
 
 <!--        <gradient-->

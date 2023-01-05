@@ -16,4 +16,9 @@
         android:icon="@drawable/order1"
         android:title="@string/title_orders" />
 
+    <item
+        android:id="@+id/navigation_Account"
+        android:icon="@drawable/ic_baseline_account_circle_24"
+        android:title="@string/title_Account" />
+
 </menu>

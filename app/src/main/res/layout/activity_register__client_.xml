@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.activityclient.Register_Client_Activity">
+    tools:context=".presentation.ui.activityclient.registerclient.Register_Client_Activity">
 
 
 
@@ -16,7 +16,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <com.example.designersstore.utils.MSPTextViewBold
+        <com.example.designersstore.presentation.utils.MSPTextViewBold
             android:id="@+id/tv_title"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -56,7 +56,7 @@
 <!--                app:layout_constraintStart_toStartOf="parent"-->
 <!--                app:layout_constraintTop_toTopOf="parent">-->
 
-<!--                <com.example.designersstore.utils.MSPEditText-->
+<!--                <com.example.designersstore.presentation.utils.MSPEditText-->
 <!--                    android:id="@+id/et_first_name_Client"-->
 <!--                    android:layout_width="match_parent"-->
 <!--                    android:layout_height="wrap_content"-->
@@ -172,7 +172,7 @@
 <!--                app:layout_constraintStart_toStartOf="parent"-->
 <!--                app:layout_constraintTop_toBottomOf="@id/et_first_name_Client">-->
 
-<!--                <com.example.designersstore.utils.MSPEditText-->
+<!--                <com.example.designersstore.presentation.utils.MSPEditText-->
 <!--                    android:id="@+id/et_last_name_Client"-->
 <!--                    android:layout_width="match_parent"-->
 <!--                    android:layout_height="wrap_content"-->
@@ -196,7 +196,7 @@
 <!--                app:layout_constraintStart_toStartOf="parent"-->
 <!--                app:layout_constraintTop_toBottomOf="@id/til_last_name_Client">-->
 
-<!--                <com.example.designersstore.utils.MSPEditText-->
+<!--                <com.example.designersstore.presentation.utils.MSPEditText-->
 <!--                    android:id="@+id/et_email_Client"-->
 <!--                    android:layout_width="match_parent"-->
 <!--                    android:layout_height="wrap_content"-->
@@ -220,7 +220,7 @@
 <!--                app:layout_constraintStart_toStartOf="parent"-->
 <!--                app:layout_constraintTop_toBottomOf="@id/til_email_Client">-->
 
-<!--                <com.example.designersstore.utils.MSPEditText-->
+<!--                <com.example.designersstore.presentation.utils.MSPEditText-->
 <!--                    android:id="@+id/et_password_Client"-->
 <!--                    android:layout_width="match_parent"-->
 <!--                    android:layout_height="wrap_content"-->
@@ -244,7 +244,7 @@
 <!--                app:layout_constraintStart_toStartOf="parent"-->
 <!--                app:layout_constraintTop_toBottomOf="@id/til_password_Client">-->
 
-<!--                <com.example.designersstore.utils.MSPEditText-->
+<!--                <com.example.designersstore.presentation.utils.MSPEditText-->
 <!--                    android:id="@+id/et_confirm_password_Client"-->
 <!--                    android:layout_width="match_parent"-->
 <!--                    android:layout_height="wrap_content"-->
@@ -271,7 +271,7 @@
                     android:layout_height="wrap_content"
                     tools:checked="false" />
 
-                <com.example.designersstore.utils.MSPTextView
+                <com.example.designersstore.presentation.utils.MSPTextView
                     android:id="@+id/tv_terms_condition_Client"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -282,7 +282,7 @@
                     android:layout_marginLeft="@dimen/txt_terms_condition_marginLeft" />
             </LinearLayout>
 
-            <com.example.designersstore.utils.MSPButton
+            <com.example.designersstore.presentation.utils.MSPButton
                 android:id="@+id/btn_register_Client"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -312,7 +312,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/btn_register_Client">
 
-                <com.example.designersstore.utils.MSPTextView
+                <com.example.designersstore.presentation.utils.MSPTextView
                     android:id="@+id/tv_already_have_an_account_Client"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -321,7 +321,7 @@
                     android:textColor="@color/colorSecondaryText"
                     android:textSize="@dimen/lbl_text_view_textSize" />
 
-                <com.example.designersstore.utils.MSPTextViewBold
+                <com.example.designersstore.presentation.utils.MSPTextViewBold
                     android:id="@+id/tv_login_Client"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

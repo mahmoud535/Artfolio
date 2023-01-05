@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.ui.fragmentsclient.LanguageFragment">
+
+
+
+    <com.example.designersstore.presentation.utils.MSPRadioButton
+        android:id="@+id/ARABIC"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:text="عربي"
+        android:background="@color/colorOffWhite"
+        android:textSize="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:paddingRight="@dimen/_40sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.example.designersstore.presentation.utils.MSPRadioButton
+        android:id="@+id/ENGLISH"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:paddingLeft="@dimen/_200sdp"
+        android:background="@color/colorOffWhite"
+        android:text="English"
+        android:layout_marginTop="@dimen/_1sdp"
+        android:textSize="@dimen/_15sdp"
+        app:layout_constraintEnd_toEndOf="@+id/ARABIC"
+        app:layout_constraintStart_toStartOf="@+id/ARABIC"
+        app:layout_constraintTop_toBottomOf="@+id/ARABIC" />
+</androidx.constraintlayout.widget.ConstraintLayout>

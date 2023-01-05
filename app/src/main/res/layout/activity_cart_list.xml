@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorOffWhite"
-    tools:context=".ui.activityclient.CartListActivity">
+    tools:context=".presentation.ui.activityclient.cartlist.CartListActivity">
 
 
     <androidx.appcompat.widget.Toolbar
@@ -44,7 +44,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/toolbar_cart_list_activity" />
 
-    <com.example.designersstore.utils.MSPTextView
+    <com.example.designersstore.presentation.utils.MSPTextView
         android:id="@+id/tv_no_cart_item_found"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -79,7 +79,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <com.example.designersstore.utils.MSPTextView
+            <com.example.designersstore.presentation.utils.MSPTextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -87,7 +87,7 @@
                 android:textColor="@color/colorDarkGrey"
                 android:textSize="18sp" />
 
-            <com.example.designersstore.utils.MSPTextView
+            <com.example.designersstore.presentation.utils.MSPTextView
                 android:id="@+id/tv_sub_total"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -103,7 +103,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <com.example.designersstore.utils.MSPTextView
+            <com.example.designersstore.presentation.utils.MSPTextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -111,7 +111,7 @@
                 android:textColor="@color/colorDarkGrey"
                 android:textSize="@dimen/checkout_label_value_textSize" />
 
-            <com.example.designersstore.utils.MSPTextView
+            <com.example.designersstore.presentation.utils.MSPTextView
                 android:id="@+id/tv_shipping_charge"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -127,7 +127,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <com.example.designersstore.utils.MSPTextViewBold
+            <com.example.designersstore.presentation.utils.MSPTextViewBold
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -135,7 +135,7 @@
                 android:textColor="@color/colorDarkGrey"
                 android:textSize="@dimen/checkout_label_value_textSize" />
 
-            <com.example.designersstore.utils.MSPTextViewBold
+            <com.example.designersstore.presentation.utils.MSPTextViewBold
                 android:id="@+id/tv_total_amount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -146,7 +146,7 @@
                 android:gravity="center_horizontal" />
         </LinearLayout>
 
-        <com.example.designersstore.utils.MSPButton
+        <com.example.designersstore.presentation.utils.MSPButton
             android:id="@+id/btn_checkout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

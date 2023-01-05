@@ -66,7 +66,7 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_subtitle" translatable="false">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
 
     <string name="menu_home">Home</string>
@@ -147,5 +147,8 @@
     <string name="order_status_delivered">Delivered</string>
     <string name="no_products_sold_yet">No products sold yet!</string>
     <string name="title_sold_product_details">SOLD PRODUCT DETAILS</string>
+    <string name="title_Account">Account</string>
+    <string name="no_favorite_item_found">No Favorite Item Found</string>
+    <string name="Design_AddedTo_Favorite">The design has been added to the Favorite list</string>
     <!--END-->
 </resources>

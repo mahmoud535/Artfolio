@@ -38,10 +38,12 @@ android:paddingBottom="12dp">
     android:orientation="vertical"
     >
 
-    <com.example.designersstore.utils.MSPTextView
+    <com.example.designersstore.presentation.utils.MSPTextView
         android:id="@+id/tv_cart_item_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:ellipsize="end"
         android:textColor="@color/item_value_text_color"
         android:textSize="16sp"
         tools:text="Cart Item Title" />
@@ -50,7 +52,7 @@ android:paddingBottom="12dp">
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <com.example.designersstore.utils.MSPTextViewBold
+        <com.example.designersstore.presentation.utils.MSPTextViewBold
             android:id="@+id/tv_cart_item_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -85,7 +87,7 @@ android:paddingBottom="12dp">
                 android:padding="5dp"
                 android:src="@drawable/ic_vector_remove" />
 
-            <com.example.designersstore.utils.MSPTextView
+            <com.example.designersstore.presentation.utils.MSPTextView
                 android:id="@+id/tv_cart_quantity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

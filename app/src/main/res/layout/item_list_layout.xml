@@ -42,18 +42,22 @@
         app:layout_constraintStart_toEndOf="@id/ll_item_image"
         app:layout_constraintTop_toTopOf="parent">
 
-        <com.example.designersstore.utils.MSPTextViewBold
+        <com.example.designersstore.presentation.utils.MSPTextViewBold
             android:id="@+id/tv_item_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:ellipsize="end"
             android:textColor="@color/item_value_text_color"
             android:textSize="16sp"
             tools:text="Name" />
 
-        <com.example.designersstore.utils.MSPTextView
+        <com.example.designersstore.presentation.utils.MSPTextView
             android:id="@+id/tv_item_price"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:ellipsize="end"
             android:layout_marginTop="2dp"
             android:textColor="@color/item_value_text_color"
             android:textSize="12sp"
@@ -70,6 +74,7 @@
         android:contentDescription="@string/content_description"
         android:foreground="?attr/selectableItemBackgroundBorderless"
         android:padding="10dp"
+        android:visibility="gone"
         android:src="@drawable/ic_vector_delete"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/ll_product_details"

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.activitydesigners.ProductDetailsActivity">
+    tools:context=".presentation.ui.activityclient.ProductDetailsActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar_product_details_activity"
@@ -47,17 +47,6 @@
             android:layout_height="wrap_content"
             >
 
-<!--            <ImageView-->
-<!--                android:id="@+id/iv_product_detail_image"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="50dp"-->
-<!--                android:background="@color/colorImageViewBackground"-->
-<!--                android:contentDescription="@string/content_description"-->
-<!--                android:scaleType="fitXY"-->
-<!--                app:layout_constraintEnd_toEndOf="parent"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintTop_toTopOf="parent" />-->
-
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/iv_product_detail_image"
                 android:layout_width="match_parent"
@@ -71,6 +60,64 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:shapeAppearanceOverlay="@style/border1" />
 
+
+<!--            <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--                android:id="@+id/favorite"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:backgroundTint="@color/grey_500"-->
+<!--                android:src="@drawable/ic_baseline_favorite_24"-->
+<!--                android:layout_marginRight="@dimen/_20sdp"-->
+<!--                android:layout_marginBottom="@dimen/_20sdp"-->
+<!--                android:visibility="gone"-->
+<!--                tools:visibility="visible"-->
+<!--                app:layout_constraintBottom_toBottomOf="@+id/iv_product_detail_image"-->
+<!--                app:layout_constraintEnd_toEndOf="@+id/iv_product_detail_image"-->
+<!--                tools:ignore="ContentDescription" />-->
+
+<!--            <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--                android:id="@+id/addFavorite"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:backgroundTint="@color/grey_500"-->
+<!--                android:src="@drawable/ic_baseline_favorite_border_24"-->
+<!--                android:layout_marginRight="@dimen/_20sdp"-->
+<!--                android:layout_marginBottom="@dimen/_20sdp"-->
+<!--                android:visibility="gone"-->
+<!--                tools:visibility="visible"-->
+<!--                app:layout_constraintBottom_toBottomOf="@+id/iv_product_detail_image"-->
+<!--                app:layout_constraintEnd_toEndOf="@+id/iv_product_detail_image"-->
+<!--                tools:ignore="ContentDescription" />-->
+
+
+
+            <ImageView
+                android:id="@+id/addFavorite"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                app:srcCompat="@drawable/ic_baseline_favorite_border_24"
+                android:visibility="gone"
+                tools:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_product_detail_image"
+                app:layout_constraintEnd_toEndOf="@+id/iv_product_detail_image"
+                tools:ignore="ContentDescription" />
+
+
+            <ImageView
+                android:id="@+id/favorite"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                app:srcCompat="@drawable/ic_baseline_favorite_24"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:visibility="gone"
+
+                app:layout_constraintBottom_toBottomOf="@+id/iv_product_detail_image"
+                app:layout_constraintEnd_toEndOf="@+id/iv_product_detail_image"
+                tools:ignore="ContentDescription"/>
+
             <LinearLayout
                 android:id="@+id/ll_product_details_title_price"
                 android:layout_width="match_parent"
@@ -83,7 +130,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/iv_product_detail_image">
 
-                <com.example.designersstore.utils.MSPTextViewBold
+                <com.example.designersstore.presentation.utils.MSPTextViewBold
                     android:id="@+id/tv_product_details_title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -91,7 +138,7 @@
                     android:textSize="20sp"
                     tools:text="Design Title" />
 
-                <com.example.designersstore.utils.MSPTextView
+                <com.example.designersstore.presentation.utils.MSPTextView
                     android:id="@+id/tv_product_details_price"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -100,7 +147,7 @@
                     tools:text="$100" />
             </LinearLayout>
 
-            <com.example.designersstore.utils.MSPTextViewBold
+            <com.example.designersstore.presentation.utils.MSPTextViewBold
                 android:id="@+id/tv_product_details_label"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -112,7 +159,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/ll_product_details_title_price" />
 
-            <com.example.designersstore.utils.MSPTextView
+            <com.example.designersstore.presentation.utils.MSPTextView
                 android:id="@+id/tv_product_details_description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -136,7 +183,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_product_details_description">
 
-                <com.example.designersstore.utils.MSPTextViewBold
+                <com.example.designersstore.presentation.utils.MSPTextViewBold
                     android:id="@+id/tv_product_details_quantity"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -146,7 +193,7 @@
                     android:textColor="@color/item_value_text_color"
                     android:textSize="16sp" />
 
-                <com.example.designersstore.utils.MSPTextView
+                <com.example.designersstore.presentation.utils.MSPTextView
                     android:id="@+id/tv_product_details_available_quantity"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -161,56 +208,7 @@
                     tools:text="5" />
             </LinearLayout>
 
-            <!--TODO Step 1: Add the button as GoToCart -->
-            <!--START-->
-
-<!--            <com.example.designersstore.utils.MSPButton-->
-<!--                android:id="@+id/btn_add_to_cart"-->
-<!--                android:layout_width="200dp"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginTop="40dp"-->
-<!--                android:background="@drawable/button_background"-->
-<!--                android:foreground="?attr/selectableItemBackground"-->
-<!--                android:paddingTop="@dimen/btn_padding"-->
-<!--                android:paddingBottom="@dimen/btn_padding"-->
-<!--                android:text="@string/btn_lbl_add_to_cart"-->
-<!--                android:textColor="@android:color/white"-->
-
-<!--                android:textSize="@dimen/btn_textSize"-->
-<!--                android:visibility="gone"-->
-<!--                app:layout_constraintEnd_toEndOf="parent"-->
-<!--                app:layout_constraintHorizontal_bias="0.208"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintTop_toBottomOf="@id/ll_product_details_quantity"-->
-<!--                tools:visibility="visible" />-->
-
-            <!--            <com.example.designersstore.utils.MSPButton-->
-<!--                android:id="@+id/btn_go_to_cart"-->
-<!--                android:layout_width="200dp"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_gravity="center"-->
-<!--                android:layout_marginTop="32dp"-->
-<!--                android:background="@drawable/button_background"-->
-<!--                android:foreground="?attr/selectableItemBackground"-->
-<!--                android:gravity="center"-->
-<!--                android:paddingTop="@dimen/btn_padding"-->
-<!--                android:paddingBottom="@dimen/btn_padding"-->
-<!--                android:text="@string/btn_lbl_go_to_cart"-->
-<!--                android:textColor="@android:color/white"-->
-<!--                android:textSize="@dimen/btn_textSize"-->
-<!--                android:visibility="gone"-->
-
-<!--                app:layout_constraintEnd_toEndOf="parent"-->
-<!--                app:layout_constraintHorizontal_bias="0.208"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintTop_toBottomOf="@id/btn_add_to_cart"-->
-<!--                tools:visibility="visible" />-->
-
-
-            <!--END-->
-
-
-            <com.example.designersstore.utils.MSPButton
+            <com.example.designersstore.presentation.utils.MSPButton
                 android:id="@+id/btn_Chat"
                 android:layout_width="77dp"
                 android:layout_height="wrap_content"
@@ -219,6 +217,8 @@
                 android:layout_marginRight="16dp"
                 android:background="@drawable/button_background_chat"
                 android:gravity="center"
+                tools:visibility="visible"
+                android:visibility="gone"
                 android:paddingTop="@dimen/btn_padding"
                 android:paddingBottom="@dimen/btn_padding"
                 android:text="Chat"
@@ -227,7 +227,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/ll_product_details_quantity" />
 
-            <com.example.designersstore.utils.MSPButton
+            <com.example.designersstore.presentation.utils.MSPButton
                 android:id="@+id/btn_add_to_cart"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -253,7 +253,7 @@
 
             <!--TODO Step 1: Add the button as GoToCart -->
             <!--START-->
-            <com.example.designersstore.utils.MSPButton
+            <com.example.designersstore.presentation.utils.MSPButton
                 android:id="@+id/btn_go_to_cart"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -270,12 +270,14 @@
                 android:textColor="@android:color/white"
                 android:textSize="@dimen/btn_textSize"
                 android:visibility="gone"
+                tools:visibility="visible"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/btn_add_to_cart"
-                tools:visibility="visible"
                 android:layout_marginLeft="70dp"
                 android:layout_marginRight="180dp" />
+
+
             <!--END-->
 
 

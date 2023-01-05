@@ -9,7 +9,7 @@
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
-    tools:context=".ui.activitydesigners.Settings_Designers_Activity">
+    tools:context=".presentation.ui.activitydesigners.Settings_Designers_Activity">
 
   <RelativeLayout
       android:layout_width="match_parent"
@@ -62,7 +62,7 @@
           android:background="@drawable/user_image_background" />
     </FrameLayout>
 
-    <com.example.designersstore.utils.MSPTextView
+    <com.example.designersstore.presentation.utils.MSPTextView
         android:id="@+id/tv_edit_Designers"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -80,7 +80,7 @@
         android:textSize="@dimen/settings_edit_label_textSize"
         android:layout_alignParentRight="true" />
 
-    <com.example.designersstore.utils.MSPTextViewBold
+    <com.example.designersstore.presentation.utils.MSPTextViewBold
         android:id="@+id/tv_name_Designer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -91,7 +91,7 @@
         android:textSize="@dimen/settings_name_textSize"
         tools:text="Denis Panjuta" />
 
-    <com.example.designersstore.utils.MSPTextView
+    <com.example.designersstore.presentation.utils.MSPTextView
         android:id="@+id/tv_Profession_Designer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -102,7 +102,7 @@
         android:textSize="@dimen/settings_info_textSize"
         tools:text="Profession" />
 
-    <com.example.designersstore.utils.MSPTextView
+    <com.example.designersstore.presentation.utils.MSPTextView
         android:id="@+id/tv_gender_Designer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -113,7 +113,7 @@
         android:textSize="@dimen/settings_info_textSize"
         tools:text="Male" />
 
-    <com.example.designersstore.utils.MSPTextView
+    <com.example.designersstore.presentation.utils.MSPTextView
         android:id="@+id/tv_email_Designer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -124,7 +124,7 @@
         android:textSize="@dimen/settings_info_textSize"
         tools:text="denis.panjuta@gmail.com" />
 
-    <com.example.designersstore.utils.MSPTextView
+    <com.example.designersstore.presentation.utils.MSPTextView
         android:id="@+id/tv_mobile_number_Designer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -146,7 +146,7 @@
         android:orientation="horizontal"
         android:padding="@dimen/settings_address_padding">
 
-      <com.example.designersstore.utils.MSPTextView
+      <com.example.designersstore.presentation.utils.MSPTextView
           android:layout_width="0dp"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/settings_lbl_addresses_margin"
@@ -163,7 +163,7 @@
 
     </LinearLayout>
 
-    <com.example.designersstore.utils.MSPButton
+    <com.example.designersstore.presentation.utils.MSPButton
         android:id="@+id/btn_logout_Designer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

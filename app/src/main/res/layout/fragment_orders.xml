@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorOffWhite"
-    tools:context=".ui.fragmentsclient.OrdersFragment">
+    tools:context=".presentation.ui.fragmentsclient.OrdersFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_my_order_items"
@@ -17,7 +17,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.example.designersstore.utils.MSPTextView
+    <com.example.designersstore.presentation.utils.MSPTextView
         android:id="@+id/tv_no_orders_found"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

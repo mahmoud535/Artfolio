@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.activitydesigners.AddressListActivity_Designer">
+    tools:context=".presentation.ui.activitydesigners.addressdesigner.AddressList_Designer">
 
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar_address_list_activity_Designer"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@drawable/app_gradient_color_background"
+        android:background="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -24,7 +24,7 @@
             android:paddingStart="@dimen/toolbar_title_paddingStart"
             android:paddingEnd="0dp"
             android:text="@string/title_address_list"
-            android:textColor="@color/white"
+            android:textColor="@color/colorPrimaryText"
             android:textSize="@dimen/toolbar_title_text_size"
             android:textStyle="bold"
             android:paddingLeft="@dimen/toolbar_title_paddingLeft"
@@ -32,7 +32,7 @@
 
     </androidx.appcompat.widget.Toolbar>
 
-    <com.example.designersstore.utils.MSPTextView
+    <com.example.designersstore.presentation.utils.MSPTextView
         android:id="@+id/tv_add_address_Designer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -42,7 +42,7 @@
         android:gravity="center"
         android:padding="16dp"
         android:text="@string/lbL_add_address"
-        android:textColor="@color/Red"
+        android:textColor="@color/item_value_text_color"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -59,13 +59,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_add_address_Designer" />
 
-    <com.example.designersstore.utils.MSPTextView
+    <com.example.designersstore.presentation.utils.MSPTextView
         android:id="@+id/tv_no_address_found_Designer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:gravity="center_horizontal"
         android:text="@string/no_address_found"
         android:textAlignment="center"
         android:textColor="@color/colorSecondaryText"
@@ -73,7 +74,18 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_add_address_Designer"
-        android:gravity="center_horizontal" />
+        app:layout_constraintTop_toBottomOf="@id/tv_add_address_Designer" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

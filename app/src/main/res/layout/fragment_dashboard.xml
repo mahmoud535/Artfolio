@@ -5,17 +5,85 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".ui.fragmentsclient.DashboardFragment">
+    tools:context=".presentation.ui.fragmentsclient.DashboardFragment">
+
+    <Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_55sdp"
+        android:background="@color/white"
+        android:elevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        >
+
+        <ImageView
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:src="@drawable/logo_designer_store_light_gray"
+            app:tint="@color/colorPrimaryText" />
+
+
+        <com.example.designersstore.presentation.utils.MSPText
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:text="ArtFolio"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/_13sdp"
+            tools:layout_editor_absoluteX="196dp"
+            tools:layout_editor_absoluteY="31dp" />
+
+        <ImageButton
+            android:id="@+id/action_Search"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginLeft="@dimen/_100sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:background="@drawable/button_background_chat"
+            android:src="@drawable/ic_baseline_search_24"
+            app:tint="@color/colorPrimaryText"
+            tools:layout_editor_absoluteX="352dp"
+            tools:layout_editor_absoluteY="10dp" />
+
+        <ImageButton
+            android:id="@+id/action_cart"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:background="@drawable/button_background_chat"
+            android:src="@drawable/ic_vector_cart"
+            app:tint="@color/colorPrimaryText"
+            tools:layout_editor_absoluteX="352dp"
+            tools:layout_editor_absoluteY="10dp" />
+
+    </Toolbar>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeToRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolBar">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_dashboard_items"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/toolBar"
+        tools:listitem="@layout/item_dashboard_layout" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
     <TextView
         android:id="@+id/tv_no_dashboard_items_found"
@@ -25,9 +93,9 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:gravity="center_horizontal"
-        android:textColor="@color/colorPrimaryText"
         android:text="@string/no_dashboard_item_found"
         android:textAlignment="center"
+        android:textColor="@color/colorPrimaryText"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -46,5 +114,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

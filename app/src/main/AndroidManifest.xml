@@ -14,58 +14,58 @@
         android:theme="@style/Theme.DesignersStore">
 
         <activity
-            android:name=".ui.activitydesigners.ActivityChatLogDesginer"
+            android:name="com.example.designersstore.presentation.ui.activitydesigners.ActivityChatLogDesginer"
             android:exported="false" />
         <activity
-            android:name=".ui.activitydesigners.ActivityDesignerNewMessages"
+            android:name="com.example.designersstore.presentation.ui.activitydesigners.ActivityDesignerNewMessages"
             android:exported="false" />
         <activity
-            android:name=".ui.activityclient.ActivityChatLogClient"
+            android:name="com.example.designersstore.presentation.ui.activityclient.ActivityChatLogClient"
             android:exported="false" />
         <activity
-            android:name=".ui.activityclient.ActivityClientNewMessages"
+            android:name="com.example.designersstore.presentation.ui.activityclient.ActivityClientNewMessages"
             android:exported="false" />
-        <activity android:name=".ui.activitydesigners.SoldProductDetailsActivity"
+        <activity android:name="com.example.designersstore.presentation.ui.activitydesigners.SoldProductDetailsActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.DesignersStore.NoActionBar" />
         <activity
-            android:name=".ui.activityclient.MyOrderDetailsActivity"
+            android:name="com.example.designersstore.presentation.ui.activityclient.orderdetails.MyOrderDetailsActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.DesignersStore.NoActionBar" />
         <activity
-            android:name=".ui.activityclient.CheckoutActivity"
+            android:name="com.example.designersstore.presentation.ui.activityclient.checkout.CheckoutActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.DesignersStore.NoActionBar" />
         <activity
-            android:name=".ui.activityclient.CartListActivity"
+            android:name="com.example.designersstore.presentation.ui.activityclient.cartlist.CartListActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.DesignersStore.NoActionBar" />
         <activity
-            android:name=".ui.activitydesigners.AddproductActivity"
+            android:name="com.example.designersstore.presentation.ui.activitydesigners.AddproductActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.DesignersStore.NoActionBar" />
         <activity
-            android:name=".ui.activitydesigners.ProductDetailsActivity"
+            android:name="com.example.designersstore.presentation.ui.activityclient.ProductDetailsActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.DesignersStore.NoActionBar" />
         <activity
-            android:name=".ui.activitydesigners.AddEditAddressActivityDesigners"
+            android:name="com.example.designersstore.presentation.ui.activitydesigners.AddEditAddressDesigners"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.DesignersStore.NoActionBar" />
         <activity
-            android:name=".ui.activitydesigners.AddressListActivity_Designer"
+            android:name="com.example.designersstore.presentation.ui.activitydesigners.addressdesigner.AddressList_Designer"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.DesignersStore.NoActionBar" />
         <activity
-            android:name=".ui.activityclient.AddEditAddressActivity"
+            android:name="com.example.designersstore.presentation.ui.activityclient.addeditaddressactivity.AddEditAddress"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.DesignersStore.NoActionBar" />
         <activity
-            android:name=".ui.activityclient.AddressListActivity_Client"
+            android:name="com.example.designersstore.presentation.ui.activityclient.addresslistclient.AddressList_Client"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.DesignersStore.NoActionBar" />
         <activity
-            android:name=".ui.activitydesigners.Settings_Designers_Activity"
+            android:name="com.example.designersstore.presentation.ui.activitydesigners.Settings_Designers_Activity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.DesignersStore.NoActionBar" /> <!-- <activity -->
         <!-- android:name=".ui.activityclient.ListActivity" -->
@@ -77,53 +77,53 @@
         <!-- </intent-filter> -->
         <!-- </activity> -->
         <activity
-            android:name=".ui.activityclient.SettingsActivity"
+            android:name="com.example.designersstore.presentation.ui.activityclient.settingclient.SettingsActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.DesignersStore.NoActionBar" />
-        <activity android:name=".ui.activitydesigners.Products_Activity" /> <!-- <activity -->
+        <activity android:name="com.example.designersstore.presentation.ui.activitydesigners.Products_Activity" /> <!-- <activity -->
         <!-- android:name=".ui.fragmentsdesigners.Main_Products_Activity" -->
         <!-- android:label="@string/title_activity_main__products_" /> -->
         <activity
-            android:name=".ui.activitydesigners.Designers_Profile_Activity"
+            android:name="com.example.designersstore.presentation.ui.activitydesigners.Designers_Profile_Activity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.DesignersStore.NoActionBar" />
         <activity
-            android:name=".ui.activitydesigners.Forgotpassword_Designers_Activity"
+            android:name="com.example.designersstore.presentation.ui.activitydesigners.Forgotpassword_Designers_Activity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.DesignersStore.NoActionBar" />
         <activity
-            android:name=".ui.activitydesigners.Register_Designers_Activity"
+            android:name="com.example.designersstore.presentation.ui.activitydesigners.Register_Designers_Activity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.DesignersStore.NoActionBar" />
+             />
         <activity
-            android:name=".ui.activityclient.DashboardActivity"
+            android:name="com.example.designersstore.presentation.ui.activityclient.DashboardActivity"
             android:label="@string/title_activity_dashboard" />
         <activity
-            android:name=".ui.activityclient.Client_Profile_Activity"
+            android:name="com.example.designersstore.presentation.ui.activityclient.clientprofile.Client_Profile_Activity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.DesignersStore.NoActionBar" />
         <activity
-            android:name=".ui.activityclient.Forgotpassword_Client_Activity"
+            android:name="com.example.designersstore.presentation.ui.activityclient.Forgotpassword_Client_Activity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.DesignersStore.NoActionBar" />
         <activity
-            android:name=".ui.activityclient.Register_Client_Activity"
+            android:name="com.example.designersstore.presentation.ui.activityclient.registerclient.Register_Client_Activity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.DesignersStore.NoActionBar" />
         <activity
-            android:name=".ui.activityclient.Login_Client_Activity"
+            android:name="com.example.designersstore.presentation.ui.activityclient.loginclient.Login_Client_Activity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.DesignersStore.NoActionBar" />
         <activity
-            android:name=".ui.activitydesigners.Login_Designers_Activity"
+            android:name="com.example.designersstore.presentation.ui.activitydesigners.Login_Designers_Activity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.DesignersStore.NoActionBar" />
         <activity
-            android:name=".ui.activity.WelcomeActivity"
+            android:name="com.example.designersstore.presentation.ui.activity.WelcomeActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.DesignersStore.NoActionBar" />
         <activity
-            android:name=".ui.activity.SplashActivity"
+            android:name="com.example.designersstore.presentation.ui.activity.SplashActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.DesignersStore.NoActionBar"
             android:exported="true">
@@ -133,7 +133,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.activity.MainActivity" />
+        <activity android:name="com.example.designersstore.presentation.ui.activity.MainActivity" />
     </application>
 
 </manifest>

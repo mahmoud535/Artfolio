@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-    tools:context=".ui.activity.SplashActivity"
-    android:background="@color/white">
+    tools:context=".presentation.ui.activity.SplashActivity"
+    android:background="@color/Red">
 
-<!--    <com.example.designersstore.utils.MSPTextViewBold-->
+<!--    <com.example.designersstore.presentation.utils.MSPTextViewBold-->
 <!--        android:id="@+id/MSPTextViewBold"-->
 <!--        android:layout_width="match_parent"-->
 <!--        android:layout_height="wrap_content"-->
@@ -33,6 +33,6 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo_designerstore" />
+        app:srcCompat="@drawable/logo_designer_splash" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

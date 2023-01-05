@@ -1,0 +1,16 @@
+
+qkotlin:S6306("TUsing "GlobalScope" here leads to the breaking of structured concurrency principles.(š£žŒúÿÿÿÿ
+qkotlin:S63060"TUsing "GlobalScope" here leads to the breaking of structured concurrency principles.(š£žŒúÿÿÿÿ
+qkotlin:S63069"TUsing "GlobalScope" here leads to the breaking of structured concurrency principles.(š£žŒúÿÿÿÿ
+qkotlin:S6306E"TUsing "GlobalScope" here leads to the breaking of structured concurrency principles.(š£žŒúÿÿÿÿ
+qkotlin:S6306Q"TUsing "GlobalScope" here leads to the breaking of structured concurrency principles.(š£žŒúÿÿÿÿ
+qkotlin:S6306["TUsing "GlobalScope" here leads to the breaking of structured concurrency principles.(š£žŒúÿÿÿÿ
+mkotlin:S6306¯"TUsing "GlobalScope" here leads to the breaking of structured concurrency principles.(á¥ €
+2kotlin:S1128"Remove this unused import.(üƒŠ¸
+7kotlin:S1128"Remove this unused import.(ú¹ÚÇüÿÿÿÿ
+7kotlin:S1128"Remove this unused import.(Š¤ƒžùÿÿÿÿ
+2kotlin:S1128"Remove this unused import.(£°ÎÐ
+ykotlin:S101"]Rename class "AddressListActivity_Client" to match the regular expression ^[A-Z][a-zA-Z0-9]*$(Œïïúÿÿÿÿÿ
+4kotlin:S6310j"Avoid hardcoded dispatchers.(Í¡·Þ
+5kotlin:S6310¯"Avoid hardcoded dispatchers.(á¥ €
+4kotlin:S6310\"Avoid hardcoded dispatchers.(Í¡·Þ

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.activitydesigners.Login_Designers_Activity">
+    tools:context=".presentation.ui.activitydesigners.Login_Designers_Activity">
 
      <FrameLayout
          android:layout_width="wrap_content"
@@ -24,15 +24,17 @@
 
      </FrameLayout>
 
-    <com.example.designersstore.utils.MSPTextViewBold
+
+    <com.example.designersstore.presentation.utils.MSPText
         android:id="@+id/tv_title_designer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="180dp"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_marginTop="100dp"
         android:gravity="center"
-        android:text="ARTFOLIO"
+        android:text="ForDesigner"
+        android:paddingTop="@dimen/_25sdp"
         android:textColor="@color/colorPrimaryText"
-        android:textSize="@dimen/title_textSize"
+        android:textSize="@dimen/_20sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -46,7 +48,6 @@
         android:layout_height="50dp"
         android:layout_marginEnd="30dp"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="30dp"
         android:background="@drawable/rounded_edittext_register_login"
         android:ems="10"
         android:hint="Email"
@@ -91,7 +92,7 @@
 <!--        app:layout_constraintStart_toStartOf="parent"-->
 <!--        app:layout_constraintTop_toBottomOf="@id/tv_title_designer">-->
 
-<!--        <com.example.designersstore.utils.MSPEditText-->
+<!--        <com.example.designersstore.presentation.utils.MSPEditText-->
 <!--            android:id="@+id/et_email_designer"-->
 <!--            android:layout_width="match_parent"-->
 <!--            android:layout_height="wrap_content"-->
@@ -117,7 +118,7 @@
 <!--        app:layout_constraintStart_toStartOf="parent"-->
 <!--        app:layout_constraintTop_toBottomOf="@id/til_email_designer">-->
 
-<!--        <com.example.designersstore.utils.MSPEditText-->
+<!--        <com.example.designersstore.presentation.utils.MSPEditText-->
 <!--            android:id="@+id/et_password_designer"-->
 <!--            android:layout_width="match_parent"-->
 <!--            android:layout_height="wrap_content"-->
@@ -127,7 +128,7 @@
 <!--            android:textSize="@dimen/et_textSize"-->
 <!--            tools:text="123456" />-->
 <!--    </com.google.android.material.textfield.TextInputLayout>-->
-    <com.example.designersstore.utils.MSPTextView
+    <com.example.designersstore.presentation.utils.MSPTextView
         android:id="@+id/tv_forgot_password_designer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -142,7 +143,7 @@
         android:layout_marginRight="16dp" />
 
 
-    <com.example.designersstore.utils.MSPButton
+    <com.example.designersstore.presentation.utils.MSPButton
         android:id="@+id/btn_login_designer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -172,7 +173,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_login_designer">
 
-        <com.example.designersstore.utils.MSPTextView
+        <com.example.designersstore.presentation.utils.MSPTextView
             android:id="@+id/tv_don_t_have_an_account"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -181,7 +182,7 @@
             android:textColor="@color/colorSecondaryText"
             android:textSize="@dimen/lbl_text_view_textSize" />
 
-        <com.example.designersstore.utils.MSPTextViewBold
+        <com.example.designersstore.presentation.utils.MSPTextViewBold
             android:id="@+id/tv_register_designer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
